@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView, useScroll } from "framer-motion";
-import Brain from "@/components/brain";
+import Brain from "@/components/owl";
 import Image from "next/image";
 
 const AboutPage = () => {
@@ -11,10 +11,16 @@ const AboutPage = () => {
   //console.log(scrollYProgress);
 
   const skillRef = useRef();
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const isSkillRefInView = useInView(skillRef, {
+    margin: "-100px",
+    once: true,
+  });
 
   const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const isExperienceRefInView = useInView(experienceRef, {
+    margin: "-100px",
+    once: true,
+  });
   return (
     <motion.div
       className="h-full"
@@ -25,36 +31,94 @@ const AboutPage = () => {
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
 
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-3/5">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESCRIPTION */}
             <p className="text-lg">
-              কিছু বিষাদ হোক পাখি নগরীর নোনা ধরা দেয়ালে কাঁচপোকা সারি সারি
-              নির্বাণ-নির্বাণ ডেকে যায় কিছু ভুল রঙের ফুল ফুটে আছে রাজপথে কিছু
-              মিথ্যে কথার রং আমাদের হৃদয়ে
+              I’m Mobashira Mehajabin Nomrota, currently studying in Electrical
+              and Electronic Engineering at BUET. I thrive on debating,
+              anchoring events, and painting. I love literature which is my
+              escape route into different worlds and perspectives. I have
+              leadership and organizing quality with good communication skills.
+              I’m trying to improve my skills constantly pushing my boundaries.
+              I’m eager to engage myself with research work. I’m hard working
+              and try to make a meaningful impact wherever I go. Let's see where
+              this journey takes me next!
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              ক্ষমাহীন প্রান্তর জুড়ে আমাদের বেঁচে থাকা
+              Mobashira Mehajabin Nomrota (Buet EEE’20)
             </span>
             {/* BIOGRAPHY SIGNATURE */}
             <div className="self-end">
               {/* BIOGRAPHY SVG */}
               <svg
-                width="161"
-                height="109"
-                viewBox="0 0 161 109"
+                width="183"
+                height="49"
+                viewBox="0 0 183 49"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M2 87.9458C2 82.9663 3.50166 78.33 5.16667 73.668C9.53692 61.4313 14.5581 49.5143 20 37.7235C23.9347 29.1983 26.5296 20.344 30 11.668C31.2165 8.62679 33.2339 -0.529482 33.9444 2.66799C35.8864 11.407 33.4382 22.7261 33.2222 31.5013C32.7283 51.5685 32.7071 71.8018 34.2222 91.8347C34.5698 96.4298 35 100.845 35 105.446C35 112.646 38.8349 94.5079 39 93.2791C41.3576 75.7277 40.2147 57.1471 45 40.0569C46.1269 36.0322 47.5033 32.133 48.7778 28.168C49.3677 26.3328 49.495 26.332 48.7778 27.9458C45.6454 34.9937 46.3838 43.7891 45.5 51.3902C44.977 55.8883 45.4383 60.487 44.7778 64.9458C44.4793 66.9607 43.2376 70.1787 44.0556 72.2235C44.3086 72.8562 45.007 71.246 45.4444 70.7235C47.4624 68.3132 49.7966 66.1811 52 63.9458C55.0129 60.8892 57.6172 57.5681 60.7778 54.7235C67.4647 48.7053 50.4449 69.4863 44.6111 76.3347C37.8666 84.2522 44.9329 81.0689 51.7778 82.9458C56.1234 84.1373 61.1502 86.8835 64 90.4458C66.1513 93.1348 72.5503 79.2001 73 77.9458C73.6682 76.0817 77.4926 65.9458 73.5 65.9458C70.5059 65.9458 69.1218 66.758 69 70.168C68.9657 71.1297 67.2957 82.3984 68.2222 82.5013C72.0117 82.9224 72 75.1949 72 73.4458C72 70.2817 72.1618 67.2215 71.2222 64.168C70.7599 62.6654 73.9772 67.959 74.7778 68.9458C76.6214 71.2181 79.7559 78.7222 83.5 77.8902C87.0443 77.1026 85.0707 60.3514 85 57.168C84.9732 55.9619 83.6354 53.6522 85.5556 54.0013C88.3796 54.5148 90.8708 56.6012 92.4444 58.8902C97.0654 65.6116 95.1133 75.1564 92.7778 82.7235C92.4355 83.8325 90.1111 90.6846 90.1111 89.7235C90.1111 85.1113 93.0583 80.2858 94.4444 76.0013C98.615 63.1104 97.3187 49.314 95.0556 36.1124C94.8142 34.7048 91.6871 13.2864 92 23.6124C92.7392 48.0053 103.267 71.189 108.444 94.7235C109.089 97.6517 110.825 100.973 111 103.946C111.058 104.931 112.108 98.4295 112.222 97.5013C112.492 95.3148 118.738 66.4076 120.5 67.1124C123.278 68.2236 125.45 81.7926 126.778 84.9458C127.608 86.9181 127.188 86.4732 129.167 84.8902C133.868 81.129 139.547 78.3997 145 75.9458C147.79 74.6903 159 72.4563 159 68.9458"
+                  d="M13 38C13.339 40.7117 17 38.2553 17 36C17 33.2156 16.4498 32 13.5 32C11.1667 32 8.83333 32 6.5 32C4.04635 32 5 36.1801 5 38C5 41.4355 9.34525 45.0272 12.5556 45.9444C17.3655 47.3187 20.2212 47.7871 23.5556 43.5C29.6715 35.6367 20.5459 27.9903 14.7778 22.2222C10.9856 18.43 7.39706 14.3971 3.5 10.5C-1.87397 5.12603 11.3615 12.4519 13 14.5C18.0424 20.8031 27.9734 23.2167 33 29.5C34.8616 31.827 38.4541 36.1866 41 37.7778C41.2677 37.9451 50.5556 46.9384 50.5556 46.5556C50.5556 45.4707 46.5392 42.2945 45.7778 41C44.5021 38.8313 41.5961 35.9326 41.0556 33.5C39.7664 27.699 36 22.6076 36 16.5C36 14.4166 35.4839 11.5565 36.0556 9.55556C36.7451 7.14231 39.4826 7.8139 40.7778 6.77778C43.0026 4.99792 51.0692 2 54 2"
                   stroke="black"
-                  strokeWidth="3"
-                  strokeLinecap="round"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M62 31C57.0335 31 57 33.3947 57 38C57 40.8799 63.4227 40.3382 65.7778 42.2222C70.0659 45.6527 70.1527 38.5965 70 36C69.8423 33.3195 65.1044 31 63 31"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M65 30C73.2002 30 77 31.9863 77 40.5C77 45.5689 78.6837 37.2117 79.2222 36C79.7002 34.9245 79.738 32.0742 81 32C82.1293 31.9336 84.9084 31.4424 85 33C85.1614 35.7437 85.3087 38.3859 87 40.5C88.2611 42.0764 87.6146 33.3244 88.5556 33.0556C100.972 29.508 91.8603 41.4301 97 44"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M96 46C96 42.795 99 40.8269 99 37C99 32.4861 102.196 32 106 32C112.263 32 112.517 32.5124 107.778 36.7778C104.808 39.4505 112.308 42 115 42"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M121 32C116.159 32 117 35.0247 117 39C117 43.3018 120.435 42 124 42C128.802 42 128 40.36 128 36C128 33.4867 123.308 33 121 33"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M133 16C133 20.0921 130.102 42.0508 136 45"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M124 32C126.96 32 130.614 32.5858 133.5 31.9444C134.317 31.7628 137.077 29.5992 137.778 30.2222C138.797 31.1279 138.457 32.2287 140 33"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M147.736 38.6832C147.152 35.9051 146 33.1949 146 35C146 36.6181 146.68 37.8094 147.736 38.6832Z"
+                  fill="black"
+                />
+                <path
+                  d="M145 33C143.061 33.2424 136.094 39.075 138.5 41C140.208 42.3662 146.58 47.2212 147.944 42.4444C148.66 39.9396 146 32.2572 146 35C146 40.2227 153.089 41 157 41"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M156 41C163.461 41 163.796 32.6691 169.5 29.5C179.071 24.1828 181 32.4394 181 40"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-linecap="round"
                 />
               </svg>
             </div>
@@ -100,14 +164,9 @@ const AboutPage = () => {
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                JavaScript
+                Matlab
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Java
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Python
-              </div>
+
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 C++
               </div>
@@ -115,10 +174,13 @@ const AboutPage = () => {
                 C
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                LeetCode
+                Word
               </div>
               <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                CodeForces
+                Excel
+              </div>
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Canva
               </div>
             </motion.div>
             {/* SKILL SVG */}
@@ -172,20 +234,20 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                    Vice Precident
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
+                    Participated many debate tournaments, organized debates,
+                    seminars and sessions.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - Present
+                    2013 - 2019
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
+                    CPSCR Debating Club
                   </div>
                 </div>
                 {/* CENTER */}
@@ -215,20 +277,20 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    Vice Precident
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
+                    Participated in math olympiads, organized quizzes and
+                    seminars .{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{" "}
+                    2016 - 2018{" "}
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
+                    CPSCR Math Club
                   </div>
                 </div>
               </div>
@@ -238,16 +300,19 @@ const AboutPage = () => {
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{" "}
+                    Teacher
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I provided web solutions, applying a range of technologies
-                    to address client requirements.{" "}
+                    Solved academics problems and gave guidelines to students .{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{" "}
+                    2021 - 2022
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    Bondi Pathshala
                   </div>
                 </div>
                 {/* CENTER */}
@@ -259,13 +324,79 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/* RIGHT */}
-                <div className="w-1/3"></div>
+                <div className="w-1/3 "></div>
+              </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-64">
+                {/* LEFT */}
+                <div className="w-1/3 "></div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Publication Secretary
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Participated many tournaments, organized debates , buetdc
+                    national event 2023, many intra institute events, case
+                    competitions and seminars .{" "}
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2022 - Present{" "}
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    BUETDC
+                  </div>
+                </div>
+              </div>
+              {/* EXPERIENCE LIST ITEM */}
+              <div className="flex justify-between h-48">
+                {/* LEFT */}
+                <div className="w-1/3 ">
+                  {/* JOB TITLE */}
+                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    Executive Member
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    Organized drawing and exhibition programs.{" "}
+                  </div>
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2023 - Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    Charcoal - BUET Artista Society
+                  </div>
+                </div>
+                {/* CENTER */}
+                <div className="w-1/6 flex justify-center">
+                  {/* LINE */}
+                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* LINE CIRCLE */}
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 "></div>
               </div>
             </motion.div>
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 bg-red-400 sticky top-0 z-30 xl:w-1/2">
+        <div className="hidden lg:block w-2/3  sticky top-0 z-30 xl:w-2/5">
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
