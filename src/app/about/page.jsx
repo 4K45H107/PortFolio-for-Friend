@@ -34,6 +34,14 @@ const AboutPage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-3/5">
           {/* BIOGRAPHY CONTAINER */}
           <div className="flex flex-col gap-12 justify-center">
+            {/* BIOGRAPHY IMAGE */}
+            <Image
+              src="/DP.jpeg"
+              alt=""
+              width={112}
+              height={112}
+              className="w-28 h-28 rounded-full object-cover"
+            />
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESCRIPTION */}
@@ -396,7 +404,7 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-2/3  sticky top-0 z-30 xl:w-2/5">
+        <div className="hidden lg:block w-2/3  sticky top-0 z-20 xl:w-2/5">
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>

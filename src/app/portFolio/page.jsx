@@ -43,7 +43,7 @@ const items = [
   },
   {
     id: 5,
-    color: "from-purple-300 to-red-300",
+    color: "from-red-300 to-blue-300",
     title: [
       "Boimetric Authentication System",
       <br />,
@@ -58,7 +58,7 @@ const items = [
   },
   {
     id: 6,
-    color: "from-purple-300 to-red-300",
+    color: "from-blue-300 to-violet-300",
     title: [
       " EcoWatch: Smart Greenhouse",
       <br />,
@@ -102,7 +102,7 @@ const PortfolioPage = () => {
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-40 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
+                  <div className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
                     <Image
                       src={item.img}
                       alt=""
@@ -110,7 +110,7 @@ const PortfolioPage = () => {
                       className="object-contain"
                     />
                   </div>
-                  <p className="w-120 md:w-140 lg:w-[700px] lg:text-lg xl:w-[900px]">
+                  <p className="w-80 md:w-140 lg:w-[700px] lg:text-lg xl:w-[900px]">
                     {item.desc}
                   </p>
                   <button className=" w-auto p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
