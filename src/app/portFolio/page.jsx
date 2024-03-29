@@ -107,7 +107,7 @@ const PortfolioPage = () => {
                       </div>
                     ))}
                   </h1>
-                  <div className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
+                  <div className="relative h-40 md:w-96 md:h-50 lg:w-[400px] lg:h-[240px] xl:w-[500px] xl:h-[300px]">
                     <Image
                       src={item.img}
                       alt=""
@@ -115,10 +115,10 @@ const PortfolioPage = () => {
                       className="object-contain"
                     />
                   </div>
-                  <p className="w-64 md:w-128 lg:w-[600px] lg:text-sm xl:w-[800px]">
+                  <p className="w-[350px] md:w-[500px] text-sm lg:w-[650px] lg:text-sm xl:w-[850px]">
                     {item.desc}
                   </p>
-                  <div className=" w-auto px-4 py-3 text-sm md:px-4 md:text-md lg:px-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                  <div className="w-auto text-center px-4 py-3 text-sm md:px-4 md:text-md lg:px-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
                     {item.software}
                   </div>
                 </div>
