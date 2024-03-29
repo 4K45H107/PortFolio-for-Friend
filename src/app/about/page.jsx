@@ -46,19 +46,19 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESCRIPTION */}
             <p className="text-lg">
-              I’m Mobashira Mehajabin Nomrota, currently studying in Electrical
-              and Electronic Engineering at BUET. I thrive on debating,
-              anchoring events, and painting. I love literature which is my
-              escape route into different worlds and perspectives. I have
+              I&apos;m Mobashira Mehajabin Nomrota, currently studying in
+              Electrical and Electronic Engineering at BUET. I thrive on
+              debating, anchoring events, and painting. I love literature which
+              is my escape route into different worlds and perspectives. I have
               leadership and organizing quality with good communication skills.
-              I’m trying to improve my skills constantly pushing my boundaries.
-              I’m eager to engage myself with research work. I’m hard working
-              and try to make a meaningful impact wherever I go. Let's see where
-              this journey takes me next!
+              I&apos;m trying to improve my skills constantly pushing my
+              boundaries. I&apos;m eager to engage myself with research work.
+              I&apos;m hard working and try to make a meaningful impact wherever
+              I go. Let's see where this journey takes me next!
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Mobashira Mehajabin Nomrota (Buet EEE’20)
+              Mobashira Mehajabin Nomrota (Buet EEE&apos;20)
             </span>
             {/* BIOGRAPHY SIGNATURE */}
             <div className="self-end">

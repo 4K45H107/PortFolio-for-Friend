@@ -1,8 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { useRef } from "react";
+import React, { useRef } from "react";
 
 const items = [
   {
@@ -94,30 +93,32 @@ const PortfolioPage = () => {
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {items.map((item) => (
-              <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
-                key={item.id}
-              >
-                <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
-                    <Image
-                      src={item.img}
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
+              <React.Fragment key={item.id}>
+                <div
+                  key={item.id}
+                  className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                >
+                  <div className="flex flex-col gap-8 text-white">
+                    <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl">
+                      {item.title}
+                    </h1>
+                    <div className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
+                      <Image
+                        src={item.img}
+                        alt=""
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="w-80 md:w-140 lg:w-[700px] lg:text-lg xl:w-[900px]">
+                      {item.desc}
+                    </p>
+                    <button className=" w-auto p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                      {item.software}
+                    </button>
                   </div>
-                  <p className="w-80 md:w-140 lg:w-[700px] lg:text-lg xl:w-[900px]">
-                    {item.desc}
-                  </p>
-                  <button className=" w-auto p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                    {item.software}
-                  </button>
                 </div>
-              </div>
+              </React.Fragment>
             ))}
           </motion.div>
         </div>
