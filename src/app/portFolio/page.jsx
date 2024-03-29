@@ -98,11 +98,14 @@ const PortfolioPage = () => {
                   key={item.id}
                   className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 >
-                  <div className="flex flex-col gap-8 text-white">
+                  <div key={item.id} className="flex flex-col gap-8 text-white">
                     <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl">
                       {item.title}
                     </h1>
-                    <div className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]">
+                    <div
+                      key={item.id}
+                      className="relative h-60 md:w-96 md:h-50 lg:w-[500px] lg:h-[300px] xl:w-[600px] xl:h-[350px]"
+                    >
                       <Image
                         src={item.img}
                         alt=""

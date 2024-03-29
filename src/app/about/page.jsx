@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const AboutPage = () => {
   const containerRef = useRef();
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  //const { scrollYProgress } = useScroll({ container: containerRef });
 
   //console.log(scrollYProgress);
 
@@ -28,7 +28,7 @@ const AboutPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-full overflow-scroll lg:flex">
         {/* TEXT CONTAINER */}
 
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-3/5">
@@ -54,7 +54,7 @@ const AboutPage = () => {
               I&apos;m trying to improve my skills constantly pushing my
               boundaries. I&apos;m eager to engage myself with research work.
               I&apos;m hard working and try to make a meaningful impact wherever
-              I go. Let's see where this journey takes me next!
+              I go. Let&apos;s see where this journey takes me next!
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -405,7 +405,7 @@ const AboutPage = () => {
         </div>
         {/* SVG CONTAINER */}
         <div className="hidden lg:block w-2/3  sticky top-0 z-20 xl:w-2/5">
-          <Brain scrollYProgress={scrollYProgress} />
+          <Brain />
         </div>
       </div>
     </motion.div>
