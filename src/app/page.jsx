@@ -13,11 +13,11 @@ const Homepage = () => {
     >
       <div className="h-full overflow-scroll flex flex-col px-4 lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative">
+        <div className="h-1/2 lg:h-5/6 lg:mt-16 lg:w-1/2 relative">
           <Image src="/hero.jpeg" alt="" fill className="object-contain" />
         </div>
         {/* TEXT CONTAINER */}
-        <div className="ml-4 h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* TITLE */}
           <h1 className="text-4xl md:text-6xl font-bold lg:w-full">
             Mobashira Mehajabin Nomrota
