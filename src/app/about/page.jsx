@@ -1,11 +1,11 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Brain from "@/components/owl";
 import Image from "next/image";
 
 const AboutPage = () => {
-  const containerRef = useRef();
+  //const containerRef = useRef();
   //const { scrollYProgress } = useScroll({ container: containerRef });
 
   //console.log(scrollYProgress);

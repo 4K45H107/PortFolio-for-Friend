@@ -69,7 +69,7 @@ const items = [
     img: "/6.png",
     link: "",
     software: "Matlab, Simulink",
-  },
+  }
 ];
 
 const PortfolioPage = () => {
