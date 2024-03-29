@@ -100,7 +100,7 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
               >
                 <div className="flex flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-6xl">
+                  <h1 className="text-xl font-bold md:text-3xl lg:text-4xl xl:text-4xl">
                     {item.title.map((title, index) => (
                       <div key={index}>
                         {title} <br />
@@ -115,12 +115,12 @@ const PortfolioPage = () => {
                       className="object-contain"
                     />
                   </div>
-                  <p className="w-80 md:w-140 lg:w-[700px] lg:text-lg xl:w-[900px]">
+                  <p className="w-64 md:w-128 lg:w-[600px] lg:text-sm xl:w-[800px]">
                     {item.desc}
                   </p>
-                  <button className=" w-auto p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                  <div className=" w-auto px-4 py-3 text-sm md:px-4 md:text-md lg:px-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
                     {item.software}
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}
